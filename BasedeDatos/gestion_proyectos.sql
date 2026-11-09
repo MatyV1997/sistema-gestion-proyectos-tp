@@ -44,17 +44,7 @@ CREATE TABLE usuario (
     CONSTRAINT fk_tarea
         FOREIGN KEY (id_tarea)
         REFERENCES tarea(id_tarea)
-);CREATE TABLE incidencia (
-    id_incidencia INT AUTO_INCREMENT PRIMARY KEY,
-    descripcion TEXT NOT NULL,
-    prioridad VARCHAR(20),
-    estado VARCHAR(30),
-    fecha_registro DATE,
-    id_tarea INT,
 
-    CONSTRAINT fk_tarea
-        FOREIGN KEY (id_tarea)
-        REFERENCES tarea(id_tarea)
 );CREATE TABLE reporte (
     id_reporte INT AUTO_INCREMENT PRIMARY KEY,
     fecha_generacion DATE NOT NULL,
